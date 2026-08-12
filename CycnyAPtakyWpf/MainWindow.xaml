@@ -1,0 +1,62 @@
+﻿<Window x:Class="CycnyAPtakyWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cycny A Ptáky 1.0" Height="500" Width="500"
+        WindowStartupLocation="CenterScreen" Background="#FFFFE0">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Výběr pohlaví -->
+            <RowDefinition Height="Auto"/>
+            <!-- Dotaz Ano/Ne -->
+            <RowDefinition Height="*"/>
+            <!-- Video se smíchem -->
+        </Grid.RowDefinitions>
+
+        <!-- 1. VÝBĚR POHLAVÍ -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Hra o silnější nervy" 
+                       FontSize="22" FontWeight="Bold" Foreground="Green" 
+                       HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+            <TextBlock Text="Vyber pohlaví:" FontSize="14" Foreground="Gray" 
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnMuz" Content="MUŽ" FontSize="20" FontWeight="Bold" 
+                        Foreground="Blue" Background="Transparent" BorderThickness="0" 
+                        Cursor="Hand" Margin="0,0,40,0" Click="BtnMuz_Click"/>
+
+                <Button x:Name="btnZena" Content="ŽENA" FontSize="20" FontWeight="Bold" 
+                        Foreground="Red" Background="Transparent" BorderThickness="0" 
+                        Cursor="Hand" Click="BtnZena_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 2. PANELS DOTAZEM (ze začátku skrytý Visibility="Collapsed") -->
+        <StackPanel x:Name="panelDotaz" Grid.Row="1" Visibility="Collapsed" Margin="0,15,0,15">
+            <TextBlock x:Name="txtDotaz" Text="Máš malé cycny?" FontSize="18" 
+                       FontWeight="Bold" Foreground="DarkSlateGray" 
+                       HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="ANO" Width="80" Height="35" FontSize="14" FontWeight="Bold"
+                        Background="#4CAF50" Foreground="White" Margin="0,0,20,0"
+                        Click="BtnAno_Click"/>
+
+                <Button Content="NE" Width="80" Height="35" FontSize="14" FontWeight="Bold"
+                        Background="#F44336" Foreground="White"
+                        Click="BtnNe_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 3. MEDIA ELEMENT PRO VIDEO -->
+        <Grid Grid.Row="2" Margin="0,10,0,0">
+            <MediaElement x:Name="mediaPlayer" 
+                          LoadedBehavior="Manual" 
+                          UnloadedBehavior="Stop" 
+                          Stretch="Uniform"/>
+        </Grid>
+    </Grid>
+</Window>
