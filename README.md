@@ -50,6 +50,8 @@ Tato verze v1.0 obsahuje plnohodnotný instalátor vytvořený v **Inno Setup**.
 
 ```text
 CycnyAPtakyWpf/
+├── Assets/
+│   └── zaznam_aplikace.gif    # Zánam aplikace pro README.md soubor
 ├── MainWindow.xaml (.cs)      # Hlavní okno, výběr pohlaví & správa video prehrávače
 ├── PotvrzeniWindow.xaml (.cs) # Modální okno s utíkajícím tlačítkem
 ├── smich.mp4                  # Klíčový multimediální asset
@@ -64,6 +66,10 @@ CycnyAPtakyWpf/
 
 * **OS:** Windows 10 / 11
 * **Runtime:** .NET 6.0 Desktop Runtime (nebo novější)
+
+---
+
+![](https://github.com/CycnyAPtakyWpf/zaznam_aplikace.gif)
 
 ---
 
