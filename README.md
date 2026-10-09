@@ -69,7 +69,7 @@ CycnyAPtakyWpf/
 
 ---
 
-![](https://github.com/CycnyAPtakyWpf/zaznam_aplikace.gif)
+![Krátká ukázka](CycnyAPtakyWpf/Assets/zaznam_aplikace.gif)
 
 ---
 
